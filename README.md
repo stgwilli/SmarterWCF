@@ -21,8 +21,6 @@ It's quite easy! Use the `ServiceChannelClientFactory` to build the WCF proxy an
 ### Client Usage
 ```c#
     var client = new ServiceChannelClientFactory().Build<IAddThings>();
-    var result = client.Add(new AddRequest { FirstNumber = 6, SecondNumber = 6 });
-    Console.WriteLine($"Result {result.Result}");
-
-    Console.ReadLine();
+    var response = client.Add(new AddRequest { FirstNumber = 6, SecondNumber = 6 });
+    Console.WriteLine($"Result {response.Result}");
 ```
